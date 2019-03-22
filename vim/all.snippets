@@ -1,0 +1,45 @@
+snippet beg "begin{} / end{}" bA
+\begin{$1}
+	$0
+\end{$1}
+endsnippet
+
+snippet alist "alphabetical enumerate" bA 
+\begin{enumerate}[label=(\Alph*)]
+	$1
+\end{enumerate}	
+endsnippet
+
+snippet dm "Math" wA
+\[
+$1
+.\] $0
+endsnippet
+
+snippet cpg "\clearpage" bA
+\clearpage
+endsnippet
+
+snippet blue "blue text" bA
+\textcolor{blue}{$1}
+endsnippet
+
+snippet red "red text" bA
+\txtcolor{red}{$1}
+endsnippet
+
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+
+snippet sec "Section" bA
+\section{$1}
+endsnippet
+
+snippet ssec "Subsection" bA
+\subsection{$1}
+endsnippet
